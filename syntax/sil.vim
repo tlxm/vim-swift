@@ -1,3 +1,11 @@
+" This source file is part of the Swift.org open source project
+"
+" Copyright (c) 2014 - 2020 Apple Inc. and the Swift project authors
+" Licensed under Apache License v2.0 with Runtime Library Exception
+"
+" See https://swift.org/LICENSE.txt for license information
+" See https://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
+"
 " Vim syntax file
 " Language: sil
 
@@ -61,8 +69,8 @@ syn keyword swiftImport import skipwhite nextgroup=swiftImportModule
 syn match swiftImportModule /\<[A-Za-z_][A-Za-z_0-9]*\>/ contained nextgroup=swiftImportComponent
 syn match swiftImportComponent /\.\<[A-Za-z_][A-Za-z_0-9]*\>/ contained nextgroup=swiftImportComponent
 
-syn region swiftComment start="/\*" end="\*/" contains=swiftComment,swiftLineComment,swiftTodo
-syn region swiftLineComment start="//" end="$" contains=swiftComment,swiftTodo
+syn region swiftComment start="/\*" end="\*/" contains=swiftComment,swiftTodo
+syn region swiftLineComment start="//" end="$" contains=swiftTodo
 
 syn match swiftLineComment   /^#!.*/
 syn match swiftTypeName  /\<[A-Z][a-zA-Z_0-9]*\>/
